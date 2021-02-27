@@ -72,11 +72,11 @@ function showAllDom() {
     if (computerPick) {
         displayCompPick.setAttribute("class", "showPick");
         if (computerPick == "rock") {
-            displayCompPick.setAttribute("src", "/media/rock.jpg");
+            displayCompPick.setAttribute("src", "media/rock.jpg");
         } else if (computerPick == "paper") {
-            displayCompPick.setAttribute("src", "/media/paper.jpg");
+            displayCompPick.setAttribute("src", "media/paper.jpg");
         } else {
-            displayCompPick.setAttribute("src", "/media/scissors.jpg");
+            displayCompPick.setAttribute("src", "media/scissors.jpg");
         }
         try {
             compPickBox.removeChild(displayCompPick);
