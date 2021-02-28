@@ -1,3 +1,5 @@
+console.log('hello');
+
 //Create variables that changes over the course of the game
 let numWin = 0;
 let numLoss = 0;
@@ -12,18 +14,19 @@ let winCount = document.createElement('p');
 const loseCountDiv = document.querySelector('#loseCount');
 let loseCount = document.createElement('p');
 
-const showResultDiv = document.querySelector("#main");
+const showResultDiv = document.querySelector("body");
 let showResult = document.createElement('p');
 
-const playerPickBox = document.querySelector('#playerPick');
+const playerPickBox = document.querySelector('.playerPick');
 let displayPlayerPick = document.createElement('img');
 
-const compPickBox = document.querySelector('#compPick');
+const compPickBox = document.querySelector('.compPick');
 let displayCompPick = document.createElement('img');
 
 const rockBtn = document.querySelector('#rockButton');
 const paperBtn = document.querySelector('#paperButton');
 const scissorsBtn = document.querySelector('#scissorsButton');
+const resetBtn = document.querySelector('#resetButton');
 
 //Creates DOM for the 5 variables above, if there is existing DOM, it updates it to new value
 function showAllDom() {
@@ -135,7 +138,7 @@ function playUpdateShow() {
 
 //Function to end the game once win/loss reaches 5
 function gameOver() {
-    result = 'Game Over! Refresh the page to play again!';
+    result = 'Game Over! Click Reset to play again!';
     showResult.setAttribute("class", "showResultBox")
     showResult.textContent = result;
     showResultDiv.removeChild(showResult);
@@ -171,4 +174,15 @@ scissorsBtn.onclick = () => {
     } else {
         gameOver();
     }
+}
+
+resetButton.onclick = () => {
+    numWin = 0;
+    numLoss = 0;
+    playerPick = "";
+    computerPick = "";
+    result = "Win 5 games against computer!";
+    showAllDom();
+    playerPickBox.removeChild(displayPlayerPick);
+    compPickBox.removeChild(displayCompPick);
 }

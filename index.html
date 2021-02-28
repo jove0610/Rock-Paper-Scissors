@@ -1,45 +1,43 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width'>
+        <meta name='description' content='Rock Paper Scissors Browser Game'>
+        <meta name='keywords' content='rock paper scissors, browser game, games'>
+        <meta name='author' content='Jose Anthony Jovellanos'>
+        <link rel='stylesheet' href='reset.css'>
+        <link rel='stylesheet' href='try.css'>
+        
         <title>Rock Paper Scissors</title>
-        <meta charset="UTF-8" />
-        <link rel="stylesheet" href="reset.css" type="text/css">
-        <link rel="stylesheet" href="style.css" type="text/css">
     </head>
-
     <body>
-        <header id="header">
-            <h1>Rock Paper Scissors</h1>
+        <header>
+            <div class='container'>
+                <h1>Rock Paper Scissors</h1>
+            </div>
         </header>
-
-        <main id="main">
-            <div id="displayItemBox">
-                <div id="playerPick"></div>
-                <div id="compPick"></div>
+        <section id='displayPickImage'>
+            <figure class='container playerPick'></figure>
+            <figure class='container compPick'></figure>
+        </section>
+        <section id='choosePickImage'>
+            <input id="rockButton" type="image" src="media/rock.jpg">
+            <input id="paperButton" type="image" src="media/paper.jpg">
+            <input id="scissorsButton" type="image" src="media/scissors.jpg">
+        </section> 
+        <section id='resetAndScore'>
+            <button id="resetButton">Reset</button>
+            <div class="container">
+                <div id ="winP"><p>W:</p></div>
+                <div id="winCount"></div>
             </div>
-            <div id="chooseItemBox">
-                <input id="rockButton" type="image" src="media/rock.jpg" />
-                <input id="paperButton" type="image" src="media/paper.jpg" />
-                <input id="scissorsButton" type="image" src="media/scissors.jpg" />
+            <div class="container">
+                <div id="loseP"><p>L:</p></div>
+                <div id="loseCount"></div>
             </div>
+        </section>   
 
-            <div id="statusBox">
-      <!--      <button id="resetButton">Reset</button>    -->
-                <div id="scoreBox">
-                    <div id="winCountBox">
-                        <div id ="winP"><p>W:</p></div>
-                        <div id="winCount"></div>
-                    </div>
-                    <div id="loseCountBox">
-                        <div id="loseP"><p>L:</p></div>
-                        <div id="loseCount"></div>
-                    </div>
-
-                </div>
-            </div>
-            </div>
-        </main>
-
-        <script src="script.js"></script>
+        <script src="try.js"></script>
     </body>
 </html>
