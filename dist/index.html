@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Play your favorite rock, paper scissors game from your browser.">
+   <meta name="keywords" content="rock, paper, scissors, browser game, game, games, web browser game">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+   <link rel="stylesheet" href="normalize.css">
+   <link rel="stylesheet" href="style.css">
+   <title>Rock Paper Scissors</title>
+</head>
+<body>   
+   <header id="title">
+      <h1 class="title">Rock, Paper, Scissors</h1>
+   </header>
+   <div class="mobile">
+      <div>
+         <section id="result-text">
+            <p class="result-text">Score 5 wins!</p>
+         </section>
+         
+         <section class="items-selected">
+            <div>
+               <p>You</p>
+               <div class="player-item"></div>
+            </div>
+            <div>
+               <p>Computer</p>
+               <div class="computer-item"></div>
+            </div>
+         </section>
+      </div>
+
+      <div>
+         <section class="scoreboard">
+            <div class="win">
+               <p>Win: <span class="winCount"></span></p>
+            </div>
+            <div class="lose">
+               <p>Lose: <span class="loseCount"></span></p>
+            </div>
+            <button class="restart-btn">Restart</button>
+         </section>
+
+         <section class="items">
+            <button class="rock">
+               <i class="fas fa-hand-rock"></i>
+            </button>
+            <button class="paper">
+               <i class="fas fa-hand-paper"></i>
+            </button>
+            <button class="scissors">
+               <i class="fas fa-hand-scissors"></i>
+            </button>
+         </section>
+      </div>
+   </div>
+
+   <script src="app.js"></script>
+</body>
+</html>

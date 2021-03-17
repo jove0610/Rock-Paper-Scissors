@@ -1,0 +1,139 @@
+body {
+   box-sizing: border-box;
+   font-family: Arial, Helvetica, sans-serif;
+   background-color: #c4c4c4;
+}
+
+.title {
+   text-align: center;
+   font-size: 2.1rem;
+}
+
+.result-text {
+   margin: 0.5em auto 0.8em auto;
+   padding: 0.4em 0;
+   text-align: center;
+   max-width: 70%;
+   font-size: 0.9rem;
+   color: black;
+}
+
+.items-selected {
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   
+   div {
+      background: #444;
+      color: #fff;
+      
+      &:first-child {
+         border-right: 1px solid #fff;
+      }
+   }
+
+   p {
+      margin-bottom: 0;
+   }
+
+   .player-item {
+      width: 180px;
+      height: 180px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .computer-item {
+      width: 180px;
+      height: 180px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+}
+
+.scoreboard {
+   display: flex;
+   justify-content: space-between;
+   width: 300px;
+   margin: 0 auto;;
+
+   .restart-btn {
+      margin: auto 0 auto 3em;
+      padding: 0.5em 1em;
+      cursor: pointer;
+
+      &:hover {
+         background: #777;
+         color: #fff;
+         transition: all 0.1s;
+         outline: none  ;
+      }
+   }
+}
+
+.items {
+   margin: 1em auto;
+   display: flex;
+   justify-content: space-between;
+   width: 350px;
+
+   .rock,
+   .paper,
+   .scissors {
+      font-size: 5rem;
+      color: #1ce7f4;
+      padding: 0.1em;
+      background: #777;
+      border: none;
+      outline: none;
+
+      &:hover {
+         background: lightslategray;
+         transition: all 0.2s;
+      }
+      
+   }
+}
+
+#last-picked {
+   color: lightsalmon;
+   transition: none;
+}
+
+@media(max-height: 420px) {
+   body {
+      height: 100vh;
+      padding-top: 1em;
+   }
+
+   .mobile {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-evenly;
+      align-items: center;
+   }
+
+   .title {
+      font-size: 1.1rem;
+   }
+
+   .items-selected div:first-child {
+      display: none;
+   }
+
+   .scoreboard {
+      width: 200px;
+      text-align: center;
+
+      .lose {
+         margin-left: 1.5em;
+      }
+
+      .items {
+         margin: 1em auto;
+         width: 100px;
+      }
+   }
+}
